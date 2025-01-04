@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hàm kiểm tra số nguyên tố
+    </title>
+</head>
+<body>
+<p>Dach sach so nguyen to nho hon 10000:  </p>
+<input type="number" id="numberInput" placeholder="Enter a number">
+<button onclick="checkPrime()">Check</button>
+
+<script>
+    function isPrime(number) {
+        if (number <=1 ) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(number);i++) {
+            if ( number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+
+    }
+
+    const primeNumbers = [];
+    for ( let i= 2; i < 10000; i++) {
+        if (isPrime(i)) {
+            primeNumbers.push(i);
+        }
+    }
+    function checkPrime() {
+        const number = parseInt(document.getElementById("numberInput").value);
+        if (isPrime(number)) {
+            alert(number + " La so nguyen to");
+        } else  {
+            alert(number + " Khong la so nguyen to.");
+        }
+    }
+</script>
+</body>
+</html>
