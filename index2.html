@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<h1>Chuyển đổi đơn vị đo</h1>
+
+<script>
+  function footToMeter(foot) {
+    return 0.305 * foot;
+  }
+
+  function meterToFoot(meter) {
+    return 3.279 * meter;
+  }
+
+  let unit = prompt("Chọn đơn vị chuyển đổi:\n1. Feet to Meters\n2. Meters to Feet");
+  let value = parseFloat(prompt("Nhập giá trị:"));
+
+  if (unit === "1") {
+    let meters = footToMeter(value);
+    alert(value + " feet tương đương với " + meters + " meters.");
+  } else if (unit === "2") {
+    let feet = meterToFoot(value);
+    alert(value + " meters tương đương với " + feet + " feet.");
+  } else {
+    alert("Lựa chọn không hợp lệ.");
+  }
+</script>
+</body>
+</html>
