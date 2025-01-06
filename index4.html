@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+<body>
+<!--Bài 1: Tính bình phương-->
+<!--<script>-->
+<!--  function tinhBinhPhuong(so) {-->
+<!--    return so * so;-->
+<!--  }-->
+
+<!--  let so = 6;-->
+<!--  let binhPhuong = tinhBinhPhuong(so);-->
+<!--  console.log("Bình phương của", so, "là:", binhPhuong);-->
+<!--</script>-->
+
+<!--Bài 2: Tính diện tích và chu vi hình tròn-->
+<!--<script>-->
+<!--  function tinhDienTich(banKinh) {-->
+<!--    const PI = 3.14;-->
+<!--    return PI * banKinh * banKinh;-->
+<!--  }-->
+
+<!--  function tinhChuVi(banKinh) {-->
+<!--    const PI = 3.14;-->
+<!--    return 2 * PI * banKinh;-->
+<!--  }-->
+
+<!--  let banKinh = 3;-->
+<!--  let dienTich = tinhDienTich(banKinh);-->
+<!--  let chuVi = tinhChuVi(banKinh);-->
+<!--  console.log("Diện tích hình tròn:", dienTich);-->
+<!--  console.log("Chu vi hình tròn:", chuVi);-->
+<!--</script>-->
+
+<!--Bài 3: Tính giai thừa-->
+<!--<script>-->
+<!--  function tinhGiaiThua(n) {-->
+<!--    if (n === 0 || n === 1) {-->
+<!--      return 1;-->
+<!--    } else {-->
+<!--      return n * tinhGiaiThua(n - 1);-->
+<!--    }-->
+<!--  }-->
+
+<!--  let n = 5;-->
+<!--  let giaiThua = tinhGiaiThua(n);-->
+<!--  console.log("Giai thừa của", n, "là:", giaiThua);-->
+<!--</script>-->
+
+<!--Bài 4: Kiểm tra ký tự số-->
+<!--<script>-->
+<!--  function laKyTuSo(kyTu) {-->
+<!--    return !isNaN(kyTu) && kyTu >= '0' && kyTu <= '9';-->
+<!--  }-->
+
+<!--  let kyTu = '1';-->
+<!--  console.log("Có phải là ký tự số?", laKyTuSo(kyTu));-->
+<!--</script>-->
+
+<!--Bài 5: Tìm số nhỏ nhất-->
+<!--<script>-->
+<!--  function timSoNhoNhat(a, b, c) {-->
+<!--    return Math.min(a, b, c);-->
+<!--  }-->
+
+<!--  let soNhoNhat = timSoNhoNhat(5, 2, 8);-->
+<!--  console.log("Số nhỏ nhất là:", soNhoNhat);-->
+<!--</script>-->
+
+<!--Bài 6: Kiểm tra số nguyên dương-->
+<!--<script>-->
+<!--  function laSoNguyenDuong(so) {-->
+<!--    return Number.isInteger(so) && so > 0;-->
+<!--  }-->
+
+<!--  let so = 3.5;-->
+<!--  console.log("Có phải là số nguyên dương?", laSoNguyenDuong(so));-->
+<!--</script>-->
+
+<!--Bài 7: Đổi chỗ hai số-->
+<!--<script>-->
+<!--  function doiCho(a, b) {-->
+<!--    [a, b] = [b, a];-->
+<!--    console.log("Sau khi đổi chỗ: a =", a, ", b =", b);-->
+<!--  }-->
+
+<!--  let a = 5, b = 10;-->
+<!--  doiCho(a, b);-->
+<!--</script>-->
+
+<!--Bài 8: Đảo ngược mảng-->
+<script>
+  function daoNguocMang(mang) {
+    return mang.reverse();
+  }
+
+  let mang = [1, 2, 3, 4, 5];
+  let mangDaoNguoc = daoNguocMang(mang);
+  console.log("Mảng đảo ngược:", mangDaoNguoc);
+</script>
+
+<!--Bài 9: Đếm số lần xuất hiện của ký tự-->
+<script>
+  function demSoLanXuatHien(mangKyTu, kyTu) {
+    let dem = 0;
+    for (let i = 0; i < mangKyTu.length; i++) {
+      if (mangKyTu[i] === kyTu) {
+        dem++;
+      }
+    }
+    return dem === 0 ? -1 : dem;
+  }
+
+  let mangKyTu = ['a', 'b', 'a', 'c'];
+  let kyTu = 'a';
+  let soLanXuatHien = demSoLanXuatHien(mangKyTu, kyTu);
+  console.log("Số lần xuất hiện của ký tự", kyTu, "là:", soLanXuatHien);
+</script>
+
+
+
+</body>
+</html>
