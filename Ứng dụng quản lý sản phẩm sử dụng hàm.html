@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+  <style>
+    button {
+      background-color: #4CAF50; /* Màu xanh lá cây */
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <input type="text" id="newProduct" placeholder="Nhập tên sản phẩm mới">
+  <button onclick="addProduct()">Thêm</button>
+</div>
+<table id="productList">
+  <tr>
+    <th>STT</th>
+    <th>Tên sản phẩm</th>
+    <th>Thao tác</th>
+  </tr>
+</table>
+<script>
+  let products = ["Sony Xperia", "Samsung Galaxy", "Nokia 6"]; // Mảng chứa danh sách sản phẩm
+
+  function displayProducts() {
+    let table = document.getElementById("productList");
+    table.innerHTML = "<tr><th>STT</th><th>Tên sản phẩm</th><th>Thao tác</th></tr>";
+    products.forEach((product, index) => {
+      table.innerHTML += `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${product}</td>
+                        <td>
+                            <button onclick="editProduct(${index})">Sửa</button>
+                            <button onclick="deleteProduct(${index})">Xoá</button>
+                        </td>
+                    </tr>
+                `;
+    });
+  }
+
+  function addProduct() {
+    let newProduct = document.getElementById("newProduct").value;
+    products.push(newProduct);
+    displayProducts();
+    document.getElementById("newProduct").value = "";
+  }
+
+  function editProduct(index) {
+    let newProductName = prompt("Nhập tên sản phẩm mới:", products[index]);
+    if (newProductName) {
+      products[index] = newProductName;
+      displayProducts();
+    }
+  }
+
+  function deleteProduct(index) {
+    products.splice(index, 1);
+    displayProducts();
+  }
+
+  displayProducts();
+</script>
+</body>
+</html>
