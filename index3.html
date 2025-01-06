@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 01
+    </title>
+</head>
+<body>
+<!--bai 1-->
+<!-- <script>-->
+<!--   function alertMessage() {-->
+<!--     alert("Xin chao");-->
+<!--   }-->
+<!--   alertMessage();-->
+<!-- </script>-->
+
+<!--bai 2-->
+<!-- <script>-->
+<!--   function tangSo(so) {-->
+<!--     return so + 1;-->
+<!--   }-->
+
+<!--   let soNhap = prompt("Nhap vao mot so: ");-->
+<!--   soNhap = parseInt(soNhap);-->
+
+<!--   let ketQua = tangSo (soNhap);-->
+<!--   alert("So sau khi tang la: " + ketQua);-->
+<!-- </script>-->
+
+<!--bai 3 -->
+<!--<script>-->
+<!--  function soSanhVaTinhTong (so1, so2) {-->
+<!--    if ( so1 > so2) {-->
+<!--      alert ("So thu nhat lon hon so thu hai !!");-->
+<!--    } else {-->
+<!--      return so1 + so2;-->
+<!--    }-->
+<!--  }-->
+
+<!--  let num1= parseFloat (prompt("Nhap so thu nhat:"));-->
+<!--  let num2= parseFloat (prompt("Nhap so thu hai:"));-->
+
+<!--  let result = soSanhVaTinhTong(num1, num2);-->
+<!--  if (result !== undefined) {-->
+<!--    alert("Tổng của hai số là: " + result);-->
+<!--  }-->
+<!--</script>-->
+
+
+<!--Bài 4:-->
+<!--<script>-->
+<!--    function addNumbers() {-->
+<!--        firstNum = 4;-->
+<!--        secondNum = 8;-->
+<!--        result = firstNum + secondNum;-->
+
+<!--        alert("Result before returning: " + result);-->
+
+<!--        return result;-->
+<!--    }-->
+
+<!--    result = 0;-->
+
+<!--    alert("Result before calling addNumbers(): " + result);-->
+
+<!--    result = addNumbers();-->
+
+<!--    alert("Result after calling addNumbers(): " + result);-->
+<!--</script>-->
+
+<!--Bai 5-->
+<script>
+    const stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    const constellations = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function findConstellation(starName) {
+        const index = stars.indexOf(starName);
+
+        if (index !== -1) {
+            return constellations[index];
+        } else {
+            return "Không tìm thấy ngôi sao này";
+        }
+    }
+
+    const starInput = prompt("Nhập tên ngôi sao:");
+
+    const result = findConstellation(starInput);
+    alert(result);
+</script>
+</body>
+</html>
+
